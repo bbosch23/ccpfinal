@@ -76,7 +76,7 @@ int main(int argc, char **argv)
                 if(P[i][j] >= 4) //check node for >= 4
                 {
                     // subtract 4 from e
-                    fP[i][j] = P[i][j] - 4;
+                    fP[i][j] += P[i][j] - 4;
 
                     // add 1 to the neighbor north of e ** (-1 to i index if < 0 do nothing)
                     if(i-1 >= 0)
@@ -85,12 +85,12 @@ int main(int argc, char **argv)
                     }
 
                     // add 1 to the neighbor south of e ** HOW TO CHECK FOR OUT OF ARRAY BOUNDS???? COUNT? SIZE?
-                    if(i > mSize) //CHECK IF ONE LARGER THAN NUMBER OF ROWS
+                    if(i < mSize-1) //CHECK IF ONE LARGER THAN NUMBER OF ROWS
                     {
                         fP[i+1][j] = P[i+1][j] + 1;
                     }
                     // add 1 to the neighbor east of e  ** HOW TO CHECK FOR OUT OF ARRAY BOUNDS???? COUNT? SIZE?
-                    if(j > mSize) //CHECK IF ONE LARGER THAN SIZE OF ROW
+                    if(j < mSize-1) //CHECK IF ONE LARGER THAN SIZE OF ROW
                     {
                         fP[i][j+1] = P[i][j+1] + 1;
                     }
@@ -103,7 +103,7 @@ int main(int argc, char **argv)
                 }
                 else //node is less than 4
                 {
-                    fP[i][j]=P[i][j]; // node is stored into final pile
+                    fP[i][j] += P[i][j]; // node is stored into final pile
                 }
                 
             }

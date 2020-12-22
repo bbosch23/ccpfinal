@@ -17,7 +17,7 @@ Sandpile make_sandpile::generate(int S,int N)
     //creations
     Sandpile P; //sandpile
     mt19937_64 eng(1337); //engine
-    uniform_int_distribution<int> distro(0,S); //distrobution
+    uniform_int_distribution<int> distro(0,S-1); //distrobution
 
 
 
