@@ -1,5 +1,6 @@
 Brief Project Overview: https://github.com/bbosch23/ccpfinal.git
 Our project was to create the Abelian Sandpile. We implemented the algorithm that was given to us in Pseudocode into our main function.
+
 Project Structure/ Organization:
 The files that were already given and needed to be modified were:
 Main.cpp
@@ -14,8 +15,12 @@ In sandpile.cpp, we defined a function that takes a Sandpile by reference and re
 In make_sandpile.cpp, we defined a function to generate a random sandpile given a size and count. We also defined a function to read a sandpile from a file.
 In make_sandpile.h, we did a forward declaration of the functions mentioned above.
 In sandpile.h, we did a forward declaration of a function that takes a Sandpile by reference and returns a bool to indicate if the Sandpile is stable.
+
+
 Data Visualization & Animation:
 As much as we would have loved to see the full animation, we were only able to successfully get the 10x10 grid to perform properly.
+
+
 Challenges, Struggles, & Issues:
 Had struggles understanding what functions were to be passed and how to use them correctly at the start.
 When running the code we found out that when feeding it size and count, the program started to throw seg. faults. This happened too late in our development and it was too late to find out why this started happening.
